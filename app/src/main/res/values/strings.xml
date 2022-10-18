@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lembrete Beber Agua</string>
+    <string name="hint_peso">Seu peso (KG)</string>
+    <string name="hint_idade">Sua idade</string>
+    <string name="text_button_calcular">Calcular Ingestão Diaria</string>
+    <string name="lembrete">LEMBRETE</string>
+    <string name="alarme">ALARME</string>
+    <string name="txt_example">3008,6 ml</string>
+    <string name="txt_hora">00</string>
+    <string name="txt_dois_pontos">:</string>
+    <string name="txt_minutos">00</string>
+</resources>
