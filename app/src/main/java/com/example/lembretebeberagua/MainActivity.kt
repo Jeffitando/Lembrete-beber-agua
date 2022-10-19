@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.example.lembretebeberagua.model.CalcularIngestaoDiaria
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,12 +17,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var txt_result:TextView
     private lateinit var ic_refresh:ImageView
 
+    private lateinit var calcularIngestaoDiaria:CalcularIngestaoDiaria
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         supportActionBar!!.hide()
         IniciarComponentes()
+        calcularIngestaoDiaria = CalcularIngestaoDiaria()
 
         bt_calcular.setOnClickListener {
 
