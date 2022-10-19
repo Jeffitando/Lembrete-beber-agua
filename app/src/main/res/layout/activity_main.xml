@@ -9,6 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
         tools:context=".MainActivity">
 
 
@@ -103,7 +104,7 @@
             android:layout_width="0dp"
             android:layout_height="250dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="50dp"
             android:background="@drawable/container_result"
             android:elevation="12dp"
@@ -129,7 +130,7 @@
             android:id="@+id/bt_lembrete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:text="@string/lembrete"
             android:textColor="@android:color/white"
@@ -144,7 +145,7 @@
             android:id="@+id/bt_alarme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:text="@string/alarme"
             android:textColor="@android:color/white"
@@ -163,6 +164,7 @@
             android:text="@string/txt_hora"
             android:textColor="@color/black"
             android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/txt_dois_pontos"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -177,6 +179,7 @@
             android:text="@string/txt_dois_pontos"
             android:textColor="@color/black"
             android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/txt_minutos"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txt_hora"
@@ -190,6 +193,7 @@
             android:text="@string/txt_minutos"
             android:textColor="@color/black"
             android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txt_dois_pontos"

@@ -6,13 +6,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock
+import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import com.example.lembretebeberagua.databinding.ActivityMainBinding
 import com.example.lembretebeberagua.model.CalcularIngestaoDiaria
 import java.text.NumberFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+
 
     private lateinit var edit_peso: EditText
     private lateinit var edit_idade: EditText
@@ -36,6 +40,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("QueryPermissionsNeeded")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         supportActionBar!!.hide()
@@ -66,6 +71,8 @@ class MainActivity : AppCompatActivity() {
                 .setPositiveButton("OK") { dialogInterface, i ->
                     edit_peso.setText("")
                     edit_idade.setText("")
+                    txt_hora.setText("00")
+                    txt_minutos.setText("00")
                     txt_result.text = ""
                 }
             alertDialog.setNegativeButton("Cancelar") { dialogInterface, i ->
@@ -90,6 +97,8 @@ class MainActivity : AppCompatActivity() {
 
         bt_alarme.setOnClickListener {
             if (!txt_hora.text.toString().isEmpty() && !txt_minutos.text.toString().isEmpty()) {
+
+                 Log.i("Entrou", "entrou na primeira parte")
 
                 val intent = Intent(AlarmClock.ACTION_SET_ALARM)
                 intent.putExtra(AlarmClock.EXTRA_HOUR, txt_hora.text.toString().toInt())
