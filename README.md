@@ -2,6 +2,9 @@
 
 
 
+<div align="center"> 
+<img src="https://user-images.githubusercontent.com/86518315/197348489-78e4df4e-048e-4493-8904-29619d74e819.png">
+</div>
 
 
 # 🖥️: Preview
