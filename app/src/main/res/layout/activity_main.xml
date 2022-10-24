@@ -88,6 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/bg_degrade_button"
             android:clickable="true"
             android:elevation="12dp"
@@ -99,7 +100,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edit_peso" />
 
-        <View
+     <!--   <View
             android:id="@+id/container_result"
             android:layout_width="0dp"
             android:layout_height="250dp"
@@ -110,27 +111,43 @@
             android:elevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_calcular" />
+            app:layout_constraintTop_toBottomOf="@+id/bt_calcular" />-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_calcular"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/water_animation" />
 
         <TextView
             android:id="@+id/txt_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="12dp"
-            android:text=" "
-            android:textColor="@android:color/holo_blue_dark"
+            android:text=""
+            android:textColor="@color/teal_700"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/container_result"
-            app:layout_constraintEnd_toEndOf="@+id/container_result"
-            app:layout_constraintStart_toStartOf="@+id/container_result"
-            app:layout_constraintTop_toTopOf="@+id/container_result" />
+            app:layout_constraintBottom_toBottomOf="@+id/animation"
+            app:layout_constraintEnd_toEndOf="@+id/animation"
+            app:layout_constraintStart_toStartOf="@+id/animation"
+            app:layout_constraintTop_toTopOf="@+id/animation" />
 
         <Button
             android:id="@+id/bt_lembrete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:text="@string/lembrete"
             android:textColor="@android:color/white"
@@ -139,13 +156,13 @@
             app:layout_constraintEnd_toStartOf="@+id/bt_alarme"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/container_result" />
+            app:layout_constraintTop_toBottomOf="@+id/animation" />
 
         <Button
             android:id="@+id/bt_alarme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:text="@string/alarme"
             android:textColor="@android:color/white"
@@ -154,13 +171,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/bt_lembrete"
-            app:layout_constraintTop_toBottomOf="@+id/container_result" />
+            app:layout_constraintTop_toBottomOf="@+id/animation" />
 
         <TextView
             android:id="@+id/txt_hora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:text="@string/txt_hora"
             android:textColor="@color/black"
             android:textSize="35sp"
@@ -175,7 +191,6 @@
             android:id="@+id/txt_dois_pontos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:text="@string/txt_dois_pontos"
             android:textColor="@color/black"
             android:textSize="35sp"
@@ -189,7 +204,6 @@
             android:id="@+id/txt_minutos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:text="@string/txt_minutos"
             android:textColor="@color/black"
             android:textSize="35sp"
@@ -198,6 +212,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txt_dois_pontos"
             app:layout_constraintTop_toBottomOf="@+id/bt_alarme" />
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
